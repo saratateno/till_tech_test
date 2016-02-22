@@ -16,4 +16,13 @@ class Calculator
   def itemise(item, quantity)
     @price_list[item] * quantity
   end
+
+  def total(order)
+    total = 0
+    order.each_pair do | k, v |
+      total += itemise(k,v)
+    end
+    return total.round(2)
+  end
+
 end
