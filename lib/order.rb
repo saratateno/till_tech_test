@@ -7,7 +7,7 @@ class Order
   end
 
   def add(item, quantity = 1)
-    @summary[item] = quantity
+    @summary[item] ? @summary[item] += quantity : @summary[item] = quantity
   end
 
 end

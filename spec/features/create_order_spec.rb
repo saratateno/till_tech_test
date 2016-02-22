@@ -2,6 +2,7 @@
 # So that I can keep track of an order
 # I would like to enter each item of an order
 
+
 require 'order'
 
 describe 'creating an order' do
@@ -10,5 +11,13 @@ describe 'creating an order' do
     it 'adds an item to the order' do
       order.add(:cafe_latte)
       expect(order.summary).to eq({cafe_latte: 1})
+    end
+
+    # As a member of staff
+    # So that I can keep track of an order
+    # I would like to track the quantity of each item on the order
+    it 'adds more than 1 of an item to the order' do
+      2.times { order.add(:cafe_latte) }
+      expect(order.summary).to eq({cafe_latte: 2})
     end
 end
