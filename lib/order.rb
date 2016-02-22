@@ -10,4 +10,9 @@ class Order
     @summary[item] ? @summary[item] += quantity : @summary[item] = quantity
   end
 
+  def remove(item, quantity = 1)
+    @summary[item] == quantity ? @summary.delete(item) :
+                                 @summary[item] -= quantity
+  end
+
 end

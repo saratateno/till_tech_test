@@ -15,4 +15,16 @@ describe Order do
       order.add(:cafe_latte, 4)
       expect(order.summary).to eq({cafe_latte: 4})
     end
+
+    it 'removes an item from the order' do
+      order.add(:cafe_latte)
+      order.remove(:cafe_latte)
+      expect(order.summary).to eq({})
+    end
+
+    it 'removes a single quantity of an item from the order' do
+      4.times { order.add(:cafe_latte) }
+      order.remove(:cafe_latte, 2)
+      expect(order.summary).to eq({ cafe_latte: 2 })
+    end
 end
