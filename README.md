@@ -1,3 +1,49 @@
+USER STORIES
+=============
+
+Version 1
+
+```
+As a member of staff
+So that I can keep track of an order
+I would like to enter each item of an order
+
+As a member of staff
+So that I can keep track of an order
+I would like to track the quantity of each item on the order
+
+As a member of staff
+So that I can be efficient in my work
+I would like to enter multiple quantities of an item
+
+As a member of staff
+So that I can correct a mistake
+I would like to be able to remove an item from the order
+
+As a member of staff
+So that I can charge the customer the correct amount
+I would like to know the cost of each item on the order
+
+As a member of staff
+So that I can charge the customer the correct amount
+I would like to calculate the total cost of the order
+
+As a customer
+So that I understand what I am paying
+I would like to see an itemised bill of my order
+
+As a customer
+So that I understand what I am paying
+I would like to see how much tax I am paying
+```
+
+Price List
+Order (add and remove items from the list)
+Calculator (sum for each line, sum for total and tax)
+Receipt ()
+
+
+
 Till tech test
 ==============
 
@@ -18,7 +64,7 @@ This is what a sample receipt looks like:
 Version 1
 ---------
 
-Implement a system that contains the business logic to produce receipts similar to this, based on a `json` price list and test orders. A sample `.json` file has been provided with the list of products sold at this particular coffee shop. 
+Implement a system that contains the business logic to produce receipts similar to this, based on a `json` price list and test orders. A sample `.json` file has been provided with the list of products sold at this particular coffee shop.
 
 Here are some sample orders you can try - whether you use this information is up to you:
 
