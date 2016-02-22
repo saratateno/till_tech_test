@@ -10,4 +10,9 @@ describe Order do
       2.times { order.add(:cafe_latte) }
       expect(order.summary).to eq({cafe_latte: 2})
     end
+
+    it 'adds multiples of an item to the order' do
+      order.add(:cafe_latte, 4)
+      expect(order.summary).to eq({cafe_latte: 4})
+    end
 end

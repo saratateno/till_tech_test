@@ -20,4 +20,12 @@ describe 'creating an order' do
       2.times { order.add(:cafe_latte) }
       expect(order.summary).to eq({cafe_latte: 2})
     end
+
+    # As a member of staff
+    # So that I can be efficient in my work
+    # I would like to enter multiple quantities of an item
+    it 'adds multiples of an item to the order' do
+      order.add(:cafe_latte, 4)
+      expect(order.summary).to eq({cafe_latte: 4})
+    end
 end
