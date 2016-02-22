@@ -14,7 +14,6 @@ class Calculator
   end
 
   def itemise(item, quantity)
-    @price_list[item]
-
+    @price_list[item] * quantity
   end
 end
